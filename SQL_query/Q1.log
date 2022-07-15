@@ -1,0 +1,27 @@
+mysql> alter table record add column heat_w int;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc record;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | bigint       | NO   | PRI | NULL    | auto_increment |
+| qid           | int          | NO   |     | NULL    |                |
+| crawl_id      | bigint       | NO   | MUL | NULL    |                |
+| hit_at        | double       | YES  |     | NULL    |                |
+| ranking       | int          | NO   |     | NULL    |                |
+| title         | varchar(255) | NO   |     | NULL    |                |
+| heat          | varchar(20)  | NO   |     | NULL    |                |
+| created       | int          | YES  |     | NULL    |                |
+| visitCount    | int          | YES  |     | NULL    |                |
+| followerCount | int          | YES  |     | NULL    |                |
+| answerCount   | int          | YES  |     | NULL    |                |
+| excerpt       | longtext     | YES  |     | NULL    |                |
+| raw           | longtext     | YES  |     | NULL    |                |
+| url           | varchar(255) | YES  |     | NULL    |                |
+| heat_w        | int          | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+15 rows in set (0.00 sec)
+
+mysql> exit;
